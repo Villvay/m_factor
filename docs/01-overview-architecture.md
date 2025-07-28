@@ -5,7 +5,7 @@
 A healthcare provider directory platform connecting menopause patients with appropriate providers, featuring approval workflows, multi-role access, comprehensive search capabilities, analytics tracking, and data security.
 
 **Tech Stack**: Laravel 12 + Filament 3 + Inertia 2 + PostgreSQL + Cloudflare  
-**Estimated Hours**: 518 hours (including 15% buffer)  
+**Estimated Hours**: 439 hours (including 15% buffer)  
 **Soft Launch Target**: January 1st, 2026
 
 ## Why Laravel 12 for Healthcare?

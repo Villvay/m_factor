@@ -168,9 +168,10 @@ Event tracking is implemented using Laravel's event system with queued jobs for 
 ## Security Best Practices
 
 ### Authentication & Authorization
-1. **Multi-Factor Authentication**: Required for all admin users
-2. **Role-Based Access Control**: Granular permissions
-3. **Session Management**: 
+1. **Social Login**: Google and Facebook authentication
+2. **reCAPTCHA Protection**: On all registration forms
+3. **Role-Based Access Control**: Granular permissions
+4. **Session Management**: 
    - 30-minute timeout for inactive sessions
    - Secure session cookies
    - Single session per user
@@ -220,6 +221,28 @@ Event tracking is implemented using Laravel's event system with queued jobs for 
 - **Change Logs**: Track all data modifications
 - **Security Logs**: Failed login attempts, suspicious activity
 - **Retention**: 2-year audit log retention
+- **Storage**: Minimum 50GB for audit logs (healthcare typically generates 1-2GB/month)
+
+### Log Storage Solutions
+
+> **⚠️ Critical**: 500MB log retention is insufficient for healthcare compliance
+
+**Recommended Log Management Solutions:**
+
+| Solution | Monthly Cost | Storage | Retention | HIPAA Compliant |
+|----------|--------------|---------|-----------|-----------------|
+| **AWS CloudWatch Logs** | $25-50 | Unlimited | Custom | Yes |
+| **Datadog** | $31+ | 15 days included | Extended available | Yes |
+| **Papertrail** | $7-65 | 1-50GB | 1 year | Yes |
+| **LogDNA/Mezmo** | $30+ | 7-30 days | Extended available | Yes |
+| **Self-hosted ELK** | $0 + storage | Unlimited | Custom | Yes |
+| **Cloudflare Logpush** | $0 + R2 storage | Unlimited | Custom | Yes |
+
+**Recommended Approach:**
+1. **Application Logs**: Cloudflare Logpush → R2 Storage ($0.015/GB)
+2. **Audit Logs**: PostgreSQL with partitioning + backup to R2
+3. **Security Logs**: Dedicated log service (Papertrail/LogDNA)
+4. **Archive**: Compress and store in R2 after 90 days
 
 ### Documentation
 - **Security Policies**: Written and maintained
