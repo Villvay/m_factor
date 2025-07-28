@@ -132,24 +132,7 @@
 | | Anti-crawling measures | 4 | |
 | **Section Total** | | **88** | |
 
-### 5. API Development
-**Total Hours**: 32 hours
-
-| Task | Subtasks | Hours | Priority |
-|------|----------|-------|----------|
-| **Core API Endpoints** | | **20** | High |
-| | Provider search API | 8 | |
-| | Provider detail endpoints | 4 | |
-| | User management APIs | 4 | |
-| | Authentication endpoints | 4 | |
-| **API Security & Performance** | | **12** | High |
-| | API rate limiting | 4 | |
-| | Request validation | 4 | |
-| | Response caching | 2 | |
-| | API documentation | 2 | |
-| **Section Total** | | **32** | |
-
-### 6. Analytics & Touchpoint Tracking
+### 5. Analytics & Filament Dashboards
 **Total Hours**: 64 hours
 
 | Task | Subtasks | Hours | Priority |
@@ -165,12 +148,37 @@
 | | Contact click tracking | 4 | |
 | | User journey mapping | 6 | |
 | | Session tracking | 4 | |
-| **Analytics Visualization** | | **20** | Medium |
-| | Real-time dashboard | 8 | |
-| | Provider performance metrics | 4 | |
-| | Search trend visualization | 4 | |
-| | User behavior heatmaps | 4 | |
+| **Filament Analytics Dashboards** | | **20** | Medium |
+| | Real-time metrics widget | 6 | |
+| | Provider performance dashboard | 4 | |
+| | Search trends dashboard | 4 | |
+| | User behavior analytics | 4 | |
+| | Custom Filament widgets | 2 | |
 | **Section Total** | | **64** | |
+
+### 6. Blog & SEO System
+**Total Hours**: 32 hours
+
+| Task | Subtasks | Hours | Priority |
+|------|----------|-------|----------|
+| **Blog Infrastructure** | | **12** | Medium |
+| | Blog database schema | 2 | |
+| | Blog model and relationships | 2 | |
+| | Filament blog management resource | 4 | |
+| | Rich text editor integration | 2 | |
+| | Media management for blog posts | 2 | |
+| **SEO Implementation** | | **12** | High |
+| | SEO-friendly URLs (slugs) | 2 | |
+| | Meta tags management | 3 | |
+| | Sitemap generation | 2 | |
+| | OpenGraph tags | 2 | |
+| | Schema.org structured data | 3 | |
+| **Blog Frontend** | | **8** | Medium |
+| | Blog listing page | 3 | |
+| | Individual blog post view | 2 | |
+| | Category/tag filtering | 2 | |
+| | Related posts feature | 1 | |
+| **Section Total** | | **32** | |
 
 ### 7. Deployment & Launch
 **Total Hours**: 32 hours
@@ -197,8 +205,8 @@
 | Admin Panel & Provider Management | 68 |
 | Matching Algorithm | 96 |
 | Frontend & Search Implementation | 88 |
-| API Development | 32 |
-| Analytics & Touchpoint Tracking | 64 |
+| Analytics & Filament Dashboards | 64 |
+| Blog & SEO System | 32 |
 | Deployment & Launch | 32 |
 | **Subtotal** | **450** |
 | **15% Buffer** | **68** |
@@ -222,15 +230,40 @@ These items block other development and should be prioritized:
 - Advanced matching algorithm with rotation
 - Location-based search with filters
 - Provider profiles and contact system
-- Real-time analytics and visualization
+- Analytics tracking with Filament dashboards
+- Blog system for SEO traffic
 - Admin panel for management
 
 ### Features Excluded from MVP
 - A/B testing framework
-- Blog system (can be added post-launch)
-- Advanced reporting (basic dashboards only)
+- External API development (using Inertia instead)
+- Advanced reporting (basic Filament dashboards only)
 - Provider-contributed content
 - Appointment booking integration
+- Multi-language blog support (English only for MVP)
+
+## Technology Clarifications
+
+### Why No API Development?
+With Laravel 12's React starter kit and Inertia 2:
+- All data flows through Inertia controllers
+- No need for separate REST API endpoints
+- TypeScript interfaces provide type safety
+- Simpler architecture with less code
+
+### Analytics in Filament
+All analytics visualization happens within Filament admin:
+- Custom widgets for real-time metrics
+- Built-in chart components
+- No third-party analytics tools needed
+- Unified admin experience
+
+### Blog System Architecture
+Built directly in Laravel/Filament:
+- Filament resource for blog management
+- SEO-optimized frontend routes
+- No external CMS needed
+- Integrated with main site design
 
 ## Development Assumptions
 
@@ -246,7 +279,7 @@ These items block other development and should be prioritized:
 | Matching algorithm complexity | High | Extra time allocated, prototype early | 20 |
 | Laravel 12 package compatibility | Medium | Use stable packages, have fallbacks | 10 |
 | Performance optimization | Medium | Built-in caching, monitoring | 15 |
-| Analytics implementation | Medium | Use proven patterns | 10 |
+| SEO implementation | Medium | Follow proven patterns | 10 |
 | Security vulnerabilities | High | Security-first approach | 13 |
 | **Total Risk Buffer** | | | **68** |
 
@@ -260,3 +293,4 @@ Each task is considered complete when:
 - Security considerations addressed
 - Performance acceptable for MVP
 - Feature accessible and usable
+- SEO considerations implemented (where applicable)
