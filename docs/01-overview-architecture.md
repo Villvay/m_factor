@@ -5,8 +5,8 @@
 A healthcare provider directory platform connecting menopause patients with appropriate providers, featuring approval workflows, multi-role access, comprehensive search capabilities, analytics tracking, and data security.
 
 **Tech Stack**: Laravel 12 + Filament 3 + Inertia 2 + PostgreSQL + Cloudflare  
-**Timeline**: 12 weeks (solo developer) - Extended to include advanced matching algorithm  
-**Soft Launch Target**: January 1st
+**Estimated Hours**: 518 hours (including 15% buffer)  
+**Soft Launch Target**: January 1st, 2026
 
 ## Why Laravel 12 for Healthcare?
 
@@ -156,14 +156,4 @@ You can switch between React and Vue after installation. See [Frontend Migration
 3. **Cloudflare R2**: Cheaper than S3, integrated with Cloudflare
 4. **PostgreSQL Only**: Simpler than multiple databases, handles analytics fine at MVP scale
 5. **Inertia 2 + TypeScript**: Type-safe development with modern React/Vue
-6. **No Meilisearch**: PostgreSQL full-text search is sufficient for MVP
-
-## Laravel 12 Support Timeline
-
-- **Release Date**: February 24, 2025
-- **Bug Fixes Until**: August 13, 2026 (18 months)
-- **Security Fixes Until**: February 24, 2027 (2 years)
-- **PHP Support**: 8.2 - 8.4
-- **Upgrade Path**: Minimal breaking changes from Laravel 11
-
-This gives you excellent long-term stability for your healthcare platform. The minimal breaking changes philosophy means easier maintenance and updates throughout your application's lifecycle.
+6. **No Elastic Search**: PostgreSQL full-text search is sufficient for MVP

@@ -20,13 +20,13 @@ This directory contains the complete technical documentation for The (M) Factor 
 - Provider rotation and fair distribution
 - Performance optimization strategies
 
-### 3. [Implementation Timeline](03-implementation-timeline.md)
-- 12-week development timeline
-- Detailed work breakdown structure
-- Sprint-based development plan
-- Phase-by-phase task breakdown
-- Quick start commands
-- Development workflow
+### 3. [Implementation Estimation](03-implementation-estimation.md)
+- Detailed man-hour estimates (518 total hours)
+- Complete task breakdown with subtasks
+- Enhanced matching algorithm (96 hours)
+- Analytics & touchpoint tracking (64 hours)
+- Risk factors and mitigation
+- MVP-focused delivery
 
 ### 4. [Infrastructure & Costs](04-infrastructure-costs.md)
 - Service stack recommendations
@@ -53,10 +53,11 @@ This directory contains the complete technical documentation for The (M) Factor 
 
 ## Quick Reference
 
-**Project Timeline**: 12 weeks  
+**Total Estimated Hours**: 518 hours (including 15% buffer)  
 **Tech Stack**: Laravel 12 + Filament 3 + Inertia 2 + PostgreSQL + Cloudflare  
 **Launch Target**: January 1st, 2026  
 **Budget**: $24-35/month (MVP), scaling to $195/month  
+**Team Size**: Single developer  
 
 ## Key Features
 
@@ -71,7 +72,7 @@ This directory contains the complete technical documentation for The (M) Factor 
 
 1. Review the [Overview & Architecture](01-overview-architecture.md) document first
 2. Understand the [Database & Matching Algorithm](02-database-matching-algorithm.md)
-3. Follow the [Implementation Timeline](03-implementation-timeline.md)
+3. Review the [Implementation Estimation](03-implementation-estimation.md) for detailed hour breakdowns
 4. Plan infrastructure using [Infrastructure & Costs](04-infrastructure-costs.md)
 5. Implement security following [Security & Analytics](05-security-analytics.md)
 
