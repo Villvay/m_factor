@@ -4,8 +4,9 @@
 
 A healthcare provider directory platform connecting menopause patients with appropriate providers, featuring approval workflows, multi-role access, comprehensive search capabilities, analytics tracking, and data security.
 
-**Tech Stack**: Laravel 12 + Filament 3 + Inertia 2 + PostgreSQL + Cloudflare  
-**Estimated Hours**: 439 hours (including 15% buffer)  
+**Tech Stack**: Laravel 12 + Filament 3 + Inertia 2 with React+ PostgreSQL + Cloudflare  
+**Estimated Hours**: 472 hours (including 15% buffer)  
+**Recommended Hosting**: Laravel Cloud  
 **Soft Launch Target**: January 1st, 2026
 
 ## Why Laravel 12 for Healthcare?
@@ -102,13 +103,6 @@ Laravel 12 introduces new starter kits that replace Breeze/Jetstream:
 - **Includes**: Inertia 2, TypeScript, shadcn/ui, Tailwind CSS
 - **Authentication**: Built-in Laravel auth or WorkOS AuthKit
 - **Pros**: Modern stack, TypeScript by default, beautiful UI components
-- **Best for**: Your healthcare directory MVP
-
-#### Option 2: Laravel + Livewire Kit
-- **Includes**: Flux UI components, Laravel Volt, Tailwind CSS
-- **Authentication**: Built-in Laravel auth or WorkOS AuthKit
-- **Pros**: No JavaScript build step, server-side rendering
-- **Best for**: Teams preferring PHP-only
 
 #### Migration Note
 You can switch between React and Vue after installation. See [Frontend Migration Commands](code-snippets.md#frontend-migration-commands) for details.
